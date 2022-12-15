@@ -3,7 +3,9 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  entry: './src/index.js',
   output: {
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -38,7 +40,9 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ['.tsx', '.ts', '.js'] },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
