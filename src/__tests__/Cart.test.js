@@ -1,5 +1,6 @@
 import Cart from '../service/Cart';
-import Book from 
+import Book from './domain/Book';
+import MusicAlbum from './domain/MusicAlbum';
 
 test('new card should be empty', () => {
   const cart = new Cart();
