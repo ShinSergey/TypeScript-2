@@ -28,6 +28,7 @@ export default class Cart {
     }
 
     remove(id: number): void {
-        [...this._items].filter((item) => item.id !== id);
+        let filtered = [...this._items].filter((item) => item.id !== id);
+        this._items = filtered
     }
 }
